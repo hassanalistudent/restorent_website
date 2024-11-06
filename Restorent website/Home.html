@@ -54,21 +54,21 @@
                     <img src="./img/typeveg.jpg" alt="Vegetable">
                     <div class="contant">
                         <h1>Vegetable</h1>
-                        <a class="btn primry-btn" href="https://www.liveeatlearn.com/list-of-vegetables/">Learn more</a>
+                        <a class="btn primry-btn" href="https://www.liveeatlearn.com/list-of-vegetables/" target="_blank">Learn more</a>
                     </div>
                 </div>
                 <div class="image image2">
                     <img src="./img/typefrfuit.jpg" alt="Fruit">
                     <div class="contant">
                         <h1>Fruit</h1>
-                        <a class="btn primry-btn" href="https://www.liveeatlearn.com/list-of-fruits/">Learn more</a>
+                        <a class="btn primry-btn" href="https://www.liveeatlearn.com/list-of-fruits/" target="_blank">Learn more</a>
                     </div>
                 </div>
                 <div class="image image3">
                     <img src="./img/typegrains.jpg" alt="Grains">
                     <div class="contant">
                         <h1>Grains</h1>
-                        <a class="btn primry-btn" href="https://www.masterclass.com/articles/all-about-grains-21-types-of-grains">Learn more</a>
+                        <a class="btn primry-btn" href="https://www.masterclass.com/articles/all-about-grains-21-types-of-grains" target="_blank">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -188,11 +188,11 @@
                 </div>
                 <div class="contactform contact-items">
                     <h1>contact us</h1>
-                    <form >
-                        <input type="text" placeholder="name"><br>
-                        <input type="email" placeholder="E-mail"><br>
-                        <textarea name="" id="" placeholder="write your message here"></textarea><br>
-                        <input class="btn primry-btn" type="submit" value="SUBMIT">
+                    <form id="webForm">
+                        <input type="text" id="name" placeholder="name" required><br>
+                        <input type="email" id="email" placeholder="E-mail" required><br>
+                        <textarea id="textbox" placeholder="write your message here" required></textarea><br>
+                        <input onclick="validateForm()" class="btn primry-btn" type="submit" value="SUBMIT">
                     </form>
                 </div>
             </div> 
@@ -201,5 +201,41 @@
     <footer>
         <h1>restaurent website &copy; 2024 reserved</h1>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script> 
+        function validateEmail(email) { 
+            var reqfarmet = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+            return reqfarmet.test(String(email).toLowerCase()); } 
+        function validateForm() { 
+            var x = document.forms["webForm"]["name"].value; 
+            if (x == "") {
+                 alert("Name must be filled out"); 
+                 return false; 
+                }
+            var email = document.forms["webForm"]["email"].value; 
+            if (validateEmail(email)==false) {
+                 alert("Invalid email address!"); 
+                 return false; 
+                } 
+            var tb = document.forms["webForm"]["textbox"].value;
+            if (tb==""){
+                alert("Please leave your thoughts");
+                return false;
+            }
+            }
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "" && this.hash.startsWith("#")) {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function(){
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });      
+    </script>
 </body>
 </html>
