@@ -587,6 +587,11 @@ footer h1{
     .showcase-area .header-contant .NT-format{
         font-size: 2rem;
     }
+    .conflogo{
+        margin: 1rem auto;
+        width: 100px;
+        border-radius: 100px;
+    }
 }
 @media (max-width: 500px){
     html{
