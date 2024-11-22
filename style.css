@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+/* ################################################## utility classes ################################################### */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+.btn{
+    display: inline-block;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+.primry-btn{
+    background-color: #16a083;
+    color: #fff;
+}
+/* ################################################ navbar styling ################################################### */
+
+
+/* ############## for disktop ################################# */
+.navbar input[type="checkbox"],.navbar .hamburger-lines{
+    display: none;
+}
+.navbar{
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px 0px #aaa;
+    opacity: 0.85;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+.navbar-container{
+    display: flex;
+    height: 64px;
+    justify-content: space-between;
+    align-content:space-around;
+    align-items: center;
+}
+.hamburger-items{
+    order: 2;
+    display: flex;
+    z-index: 1000;
+}
+.hamburger-items li{
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+
+}
+.logo{
+    display: inline-block;
+    order: 1;
+    font-size: 3rem;
+    width: 55px;
+    border-radius: 55px;
+    object-fit: cover;
+    object-position: center;
+}
+.navbar a{
+    color: #222;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+.navbar a:hover{
+    color: seagreen;
+}
+/* ############################################ showcase-area styling ################################################# */
+.showcase-area{
+    background-image:linear-gradient(rgba(255,255,255,0.25),rgba(255,255,255,0.25)),url(./img/showcaseareaimage.jpg);
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header-contant{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    height: 100%;
+    text-align: center;
+}
+.name-position{
+    position: absolute;
+    top: 10rem;
+    left: 1rem;
+}
+.time-position{
+    position: absolute;
+    top: 10rem;
+    right: 1rem;
+}
+.header-contant .NT-format{
+    color: rgb(98, 62, 62);
+    align-self: flex-start;
+    font-size: 4rem;
+    border-left: 1rem solid rgb(98, 62, 62);
+    padding-left: 1rem;
+    transform-origin: 100%,50%;
+    transform: scaleX(0);
+    animation: scalling 1s ease-in-out 0.5s 1 forwards;
+}
+@keyframes scalling {
+    100%{
+        transform: scalex(100%);
+    }
+}
+.header-contant h1{
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.header-contant p{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+
+/* ############################################## .about-area styling ######################################## */
+.about-area{
+    padding: 2rem 0;
+    background: rgba(255, 255, 255, 1.0);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1.0), rgba(200, 200, 200, 1.0));
+}
+.about-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    /* height: 100%; */
+}
+.about-img{
+    flex: 1 1 400px;
+    padding: 30px;
+    transform:translatex(150%) ;
+    animation: boxmoving 1s ease-in-out 0.5s 1 forwards;
+}
+@keyframes boxmoving {
+    100%{
+        transform: translate(0);
+    }
+}
+
+.about-img img{
+    display: block;
+    width: 100%;
+    height: 400px;
+    max-width: 100%;
+    margin:auto;
+    object-fit: cover;
+    object-position: center;
+}
+.about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translate(-150%);
+    animation: boxmoving 1s ease-in-out 0.1s 1 forwards;
+}
+.about-text h1{
+    font-size: 3.2rem;
+}
+.about-text h3{
+    font-size: 1.6rem;
+}
+.about-text p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: justify;
+}
+/* ##################################################### types styling ##################################### */
+.types{
+    padding:2rem 0;
+}
+.types h1{
+    font-size: 3.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+.image-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+}
+.image{
+    position: relative;
+    flex:1 1 300px;
+    height: 400px;
+    margin: 1rem;
+}
+.image img{
+    display: block;
+    margin: auto;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    z-index: 1;
+    object-fit: cover;
+    object-position: center;
+}
+.image .contant{
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    z-index: 2;
+}
+.image::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #232323;
+    top: 0;
+    left: 0;
+    transform-origin: 50% 100%;
+    transform: scaleY(0);
+    z-index: 1;
+    transition: transform 1s ease-in-out;
+    opacity: 0.8;
+}
+.image:hover .contant{
+    top: 50%;
+    opacity: 1;
+}
+.image:hover::after{
+    transform: scaleY(100%);
+}
+/* ####################################################### food meno styling ########################################## */
+.food-menu{
+    padding: 2rem 0;
+}
+.food-menu h1{
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.menu-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.food-item{
+    display: flex;
+    flex: 1 1 550px;
+    height: 200px;
+    margin: 2rem;
+    padding-top: 1rem;
+}
+.food-item .food-image{
+    flex: 1 1 200px;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+.food-item .food-description{
+    flex: 1 1 300px;
+    max-width: 100%;
+    margin: auto 1.5rem;
+}
+.food-image img{
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+.food-description h2{
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.food-description p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: justify;
+}
+.food-description h3{
+    color: #16a083;
+    margin-top: 0.5em;
+}
+/* ############################################### testimonial styling ################################################## */
+
+
+.testimonial-area{
+    padding: 2rem 0;
+    background-color: #dddd;
+}
+.testimonial-area h1{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.review-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin-top: 2rem;
+}
+.customer{
+    flex: 1 1 350px;
+    text-align: center;
+    padding: 1rem;
+}
+.customer img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+.customer p{
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+}
+.customer h3{
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+}
+/* ############################################### contact area styling ##################################### */
+
+.contact-area{
+    padding: 2rem 0;
+    background-color: #aaa;
+}
+.contact-area h1{
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+.contact-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.contact-wrapper .contact-items{
+    flex:1 1 500px;
+    height: 500px;
+}
+.picture img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.contactform{
+    padding: 1rem;
+    background-color: #fff;
+    width: 50%;
+}
+.contactform textarea{
+    outline: none;
+    padding: 1rem 0;
+    display: block;
+    max-width: 100%;
+    margin-top: 1rem;
+    min-height: 250px;
+    border: none;
+    min-width: 100%;
+    border-bottom: 1px solid black;
+}
+input[type="text"]{
+    outline: none;
+    padding: 1rem 0;
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-bottom: 1px solid black;
+}
+input[type="email"]{
+    outline: none;
+    padding: 1rem 0;
+    display: block;
+    height: 3rem;
+    margin-top: 1rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+footer{
+    background-color: #232323;
+    padding: 2rem;
+}
+footer h1{
+    text-transform: capitalize;
+    color: #fff;
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 400;
+}
+
+/* ########################################## confermation sheet styling ####################################### */
+.confermation{
+    margin-top: 3rem;
+    position: absolute;
+    width: 90%;
+    height: 70vh;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    border: 2px solid black;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    box-shadow: 10px 5px 5px gray;
+}
+.confermation .fa-circle-check{
+    font-size: 1rem; /* Adjust to your desired size */
+    animation: grow 0.5s ease-in-out 50ms 1 forwards;
+}
+.confermation h1{
+    font-size: 2rem;
+}
+.confermation p{
+    font-size: 2rem;
+}
+
+@keyframes grow {
+     100% { font-size: 7rem; /* Final size */ }
+    }
+.conflogo{
+    display: block;
+    width: 120px;
+    margin:1rem auto; 
+}
+
+/* ##################################### media quries ##################################################### */
+
+@media (max-width: 680px){
+    html{
+        font-size: 50%;
+    }
+    .navbar{
+        opacity: 0.95;
+    }
+    .navbar .navbar-container input[type="checkbox"],.navbar .hamburger-lines{
+        width: 40px;
+        height: 32px;
+
+        
+    }
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        top: 17px ;
+        left: 10px;
+        opacity: 0;
+        z-index: 3;
+    }
+    .navbar .hamburger-lines{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 17px;
+        left: 10px;
+        opacity: 1;
+        z-index: 2;
+
+    }
+    .hamburger-lines .line{
+        width: 100%;
+        border: 2px solid black;
+        
+    }
+    .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.4 ease-in-out;
+    }
+    .hamburger-lines .line2{
+        transition: transform 0.4 ease-in-out;
+    }
+    .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.4 ease-in-out;
+    }
+    .navbar .navbar-container .hamburger-items{
+        padding-top: 100px;
+        height: 100vh;
+        background-color: #fff;
+        max-width: 300px;
+        transform: translateX(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+
+    }
+    .navbar .navbar-container .hamburger-items li{
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .logo{
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        font-size: 3rem;
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-items{
+        transform: translateX(0%)
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+    .types .image-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .types .image-container .image:not(:last-child){
+        margin-bottom: 3rem;  
+    }
+    .types .image{
+        box-shadow: 5px 5px 10px 0px #aaa ;  
+    }
+    .showcase-area .header-contant .NT-format{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+    .testimonial-area .review-wrapper{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .food-item{
+        flex-direction: column;
+        text-align: center;
+        height: 300px;
+    } 
+    .contact-area{
+        flex-direction: column;
+    }
+}
+@media (min-width: 680px) and (max-width: 1024px) {
+    .types .image-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .types .image-container .image:not(:last-child){
+        margin-bottom: 3rem;  
+    }
+    .types .image{
+        box-shadow: 5px 5px 10px 0px #aaa ;  
+    }
+    .review-wrapper{
+        flex-direction: column;
+    }
+    
+}
+@media (orientation: landscape) and (max-height: 500px) {
+    .showcase-area{
+        height: 50vmax;
+    }
+    
+}
