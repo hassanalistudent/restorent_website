@@ -593,6 +593,9 @@ footer h1{
         width: 100px;
         border-radius: 100px;
     }
+    .confermation{
+        margin-top: 2rem;
+    }
 }
 @media (max-width: 500px){
     html{
